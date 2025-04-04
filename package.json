@@ -1,0 +1,25 @@
+{
+  "name": "salvacion",
+  "version": "1.0.0",
+  "description": "Sample Simple",
+  "main": "app.js",
+  "scripts": {
+    "test": "Test Suit",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alangak/Salvacion"
+  },
+  "author": "Alanga",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/alangak/Salvacion/issues"
+  },
+  "homepage": "https://github.com/alangak/Salvacion#readme",
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1"
+  },
+  "type": "module"
+}
