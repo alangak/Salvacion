@@ -4,7 +4,7 @@ import white from "chalk";
 import boxen from "boxen";
 
 const greeting = white.bold("Hello World ! Late Done");
-const currentTime = white.bold(Date.now());
+const currentTime = white.bold(new Date());
 
 const boxenOptions = {
  padding: 1,
