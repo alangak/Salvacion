@@ -2,9 +2,18 @@
 
 import white from "chalk";
 import boxen from "boxen";
+import ansiEscapes from "ansi-escapes";
+
 
 const greeting = white.bold("Hello World ! Late Done");
-const currentTime = white.bold(new Date());
+
+const todayDate = {
+    hour: new Date().getHours(),
+    minute: new Date().getMinutes(),
+    second: new Date().getSeconds()
+};
+const {hour, minute, second} = todayDate;
+const currentTimeString = white.bold(hour + ":" + minute + ":" + second);
 
 const boxenOptions = {
  padding: 1,
@@ -14,7 +23,9 @@ const boxenOptions = {
  backgroundColor: "#555555"
 };
 const msgBox = boxen( greeting, boxenOptions );
-const timeBox = boxen(currentTime, boxenOptions);
+const timeBox = boxen(currentTimeString, boxenOptions);
 
 console.log(msgBox);
-console.log(timeBox);
+setInterval(() => {
+    console.log(ansiEscapes.eraseLines(1) + timeBox);
+}, 1000);
