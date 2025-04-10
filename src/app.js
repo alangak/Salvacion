@@ -3,17 +3,10 @@
 import white from "chalk";
 import boxen from "boxen";
 import ansiEscapes from "ansi-escapes";
+import { AppClock, AppTime } from "./features/popClock.js";
 
 
 const greeting = white.bold("Hello World ! Late Done");
-
-const todayDate = {
-    hour: new Date().getHours(),
-    minute: new Date().getMinutes(),
-    second: new Date().getSeconds()
-};
-const {hour, minute, second} = todayDate;
-const currentTimeString = white.bold(hour + ":" + minute + ":" + second);
 
 const boxenOptions = {
  padding: 1,
@@ -22,10 +15,11 @@ const boxenOptions = {
  borderColor: "green",
  backgroundColor: "#555555"
 };
+
 const msgBox = boxen( greeting, boxenOptions );
-const timeBox = boxen(currentTimeString, boxenOptions);
+let timeBox = boxen(white.bold(AppClock(AppTime())), boxenOptions);
 
 console.log(msgBox);
 setInterval(() => {
-    console.log(ansiEscapes.eraseLines(1) + timeBox);
+    console.log(ansiEscapes.eraseLines(1) + AppClock(AppTime()));
 }, 1000);
