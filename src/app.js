@@ -21,5 +21,5 @@ let timeBox = boxen(white.bold(AppClock(AppTime())), boxenOptions);
 
 console.log(msgBox);
 setInterval(() => {
-    console.log(ansiEscapes.eraseLines(1) + AppClock(AppTime()));
+    console.log(ansiEscapes.eraseLines(10) + boxen(white.bold(AppClock(AppTime())), boxenOptions));
 }, 1000);
