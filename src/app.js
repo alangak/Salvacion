@@ -17,7 +17,6 @@ const boxenOptions = {
 };
 
 const msgBox = boxen( greeting, boxenOptions );
-let timeBox = boxen(white.bold(AppClock(AppTime())), boxenOptions);
 
 console.log(msgBox);
 setInterval(() => {
