@@ -17,8 +17,8 @@ const boxenOptions = {
 };
 
 const msgBox = boxen( greeting, boxenOptions );
-
 console.log(msgBox);
+
 setInterval(() => {
     console.log(ansiEscapes.eraseLines(10) + boxen(white.bold(AppClock(AppTime())), boxenOptions));
 }, 1000);
