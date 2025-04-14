@@ -10,7 +10,7 @@ const getTime = () => {
 
 const standClock = (time) => {
     const {hour, minute, second} = time;
-    return hour + ":" + minute + ":" + second;
+    return String(hour).padStart(2, '0') + ":" + String(minute).padStart(2, '0') + ":" + String(second).padStart(2, '0');
 }
 
 export const AppTime = getTime;
