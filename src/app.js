@@ -12,7 +12,7 @@ const boxenOptions = {
  padding: 1,
  margin: 1,
  borderStyle: "round",
- borderColor: "green",
+ borderColor: "red",
  backgroundColor: "#555555"
 };
 
