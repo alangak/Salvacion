@@ -16,8 +16,8 @@ const boxenOptions = {
  backgroundColor: "#555555"
 };
 
-const msgBox = boxen( greeting, boxenOptions );
-console.log(msgBox);
+const timeMessageBox = boxen( greeting, boxenOptions );
+console.log(timeMessageBox);
 
 setInterval(() => {
     console.log(ansiEscapes.eraseLines(10) + boxen(white.bold(AppClock(AppTime())), boxenOptions));
